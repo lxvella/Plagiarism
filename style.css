@@ -1,0 +1,691 @@
+/* Style for the header */
+#header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #0e73d8; /* Background color of the header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+    box-sizing: border-box; /* Ensure padding is included in total width */
+}
+
+/* Align the logo to the left */
+#header .logo {
+    height: 50px; /* Adjust the height as needed */
+}
+
+/* Center the navbar and make it responsive */
+#navbar {
+    display: flex;
+    list-style: none;
+    justify-content: center; /* Center the menu */
+    flex: 1; /* Make navbar take the remaining space between logo and the right side */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    text-align: center; /* Ensure links are centered in their list items */
+}
+
+#navbar li {
+    margin-left: 20px;
+    list-style: none;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: #f6f2f2;
+    font-weight: bold;
+    padding: 10px 15px; /* Add some padding around the links */
+    display: block; /* Make the links fill the entire list item */
+}
+
+
+
+
+/* Hero Section Styling */
+#hero {
+    background-image: url('images/bg12.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+#hero h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+#hero p {
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+
+
+/* Ensure the header is responsive and fits the screen */
+@media (max-width: 768px) {
+    #header {
+        flex-direction: column; /* Stack the header elements vertically on smaller screens */
+    }
+
+    #navbar {
+        flex-direction: column; /* Stack the menu vertically on smaller screens */
+    }
+
+    #navbar li {
+        margin-left: 0; /* Remove margin on smaller screens */
+        margin-bottom: 10px; /* Add spacing between items */
+    }
+}
+
+
+
+
+/* Quick Information Section */
+#quick-info {
+    padding: 50px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+#quick-info h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#quick-info p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.5;
+    font-family: 'Georgia', serif;
+}
+
+/* Card Container */
+.quick-info-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Card Styling */
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+.card p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Button Styling */
+.card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.card .btn:hover {
+    background-color: #0056b3;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.our-doctors {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.our-doctors h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.doctor-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px;
+}
+.doctor-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.doctor-card:hover {
+    transform: translateY(-10px);
+}
+
+.doctor-card img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.doctor-card h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.doctor-card p {
+    font-size: 16px;
+    color: #777;
+}
+@media (max-width: 1024px) {
+    .doctor-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .doctor-grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 column on small screens */
+    }
+}
+
+
+
+/* Consequences Section */
+#consequences {
+    padding: 50px;
+    background-color: #f1f1f1;
+    text-align: center;
+    margin-top: 40px;
+    border-top: 3px solid #007BFF;
+}
+
+#consequences h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#consequences p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+}
+
+#consequences ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+#consequences ul li {
+    font-size: 1.1em;
+    color: #333;
+    margin: 10px 0;
+    line-height: 1.5;
+    padding-left: 25px;
+    position: relative;
+}
+
+#consequences ul li::before {
+    content: "•";
+    color: #007BFF;
+    font-size: 1.5em;
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+
+
+/* What is Plagiarism Section */
+#what-is-plagiarism {
+    padding: 50px;
+    background-color: #ffffff;
+    text-align: center;
+    margin-top: 40px;
+    border-top: 3px solid #FF6347; /* Tomato color for distinction */
+}
+
+#what-is-plagiarism h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#what-is-plagiarism p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#what-is-plagiarism ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: left;
+}
+
+#what-is-plagiarism ul li {
+    font-size: 1.1em;
+    color: #333;
+    margin: 15px 0;
+    line-height: 1.6;
+    padding-left: 30px;
+    position: relative;
+}
+
+#what-is-plagiarism ul li::before {
+    content: "•";
+    color: #FF6347; /* Tomato color for bullets */
+    font-size: 1.5em;
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+
+#what-is-plagiarism ul li strong {
+    color: #007BFF; /* Highlighting the type of plagiarism */
+}
+
+
+/* About Ryan Section */
+#about-ryan {
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* Image Styling */
+#about-ryan img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+/* Paragraph Styling */
+#about-ryan p {
+    text-align: justify;
+    margin-top: 0;
+    font-size: 1.1em;
+}
+
+/* Highlighted Text */
+#about-ryan strong {
+    color: #007BFF;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #about-ryan img {
+        float: none;
+        display: block;
+        margin: 0 auto 20px auto;
+    }
+    #about-ryan p {
+        font-size: 1em;
+    }
+}
+
+
+
+/* Main Content */
+main {
+    text-align: center;
+    padding: 100px 20px;
+
+ 
+}
+
+/* Main section styling */
+.main-section {
+  
+    background-image: url(images/bg.jpg);
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 800px;
+}
+
+/* Main section styling */
+.main-section {
+   
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 800px;
+}
+
+/* Main title styling with responsive size */
+.main-title {
+    font-size: clamp(2rem, 5vw, 4rem); /* Flexible size based on viewport */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Subtitle styling with responsive size */
+.sub-title {
+    font-size: clamp(1.5rem, 4vw, 3rem); /* Flexible size based on viewport */
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    text-transform: capitalize;
+    margin-top: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design adjustments */
+@media (max-width: 600px) {
+    .main-section {
+        padding: 30px 15px;
+    }
+}
+
+
+
+
+/* YouTube Video Section */
+#youtube-video {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+#youtube-video h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+#youtube-video p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Adjust video size to 50% */
+.video-container {
+    position: relative;
+    width: 50%; /* Set container width to 50% of the parent */
+    padding-bottom: 28.125%; /* 50% of the width to maintain 16:9 aspect ratio */
+    margin: 0 auto; /* Center the video */
+    background: #000;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Fill the container width */
+    height: 100%; /* Fill the container height */
+    border: none;
+}
+
+/* General section styling */
+.plagiarism-cases {
+    background-color: #f4f4f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Heading styling */
+.plagiarism-cases h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-weight: bold;
+}
+
+/* Individual case styling */
+.case {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+/* Image styling */
+.case-image {
+    flex: 1 1 120px;
+    max-width: 150px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Paragraph styling */
+.case p {
+    flex: 2 1 300px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    text-align: justify;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .case {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .case-image {
+        margin: 0 auto;
+    }
+}
+
+
+
+
+/* Footer section styling */
+.footer-section {
+    background-color: #1a1a1a;
+    color: #f4f4f4;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 30px;
+    font-family: 'Arial', sans-serif;
+    border-top: 3px solid #6a11cb;
+}
+
+
+/* Footer Section */
+.footer-section {
+    background-color: #1a1a1a;
+    color: #f4f4f4;
+    text-align: center;
+    padding: 15px 10px;
+    border-top: 3px solid #6a11cb;
+}
+
+.footer-text {
+    font-size: 14px;
+    color: #cccccc;
+}
+
+
+
+/* Header style */
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Section style for topics */
+.topics-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+/* Article style for each topic */
+.topic-article {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for articles */
+.topic-article:hover {
+    transform: scale(1.05);
+}
+
+/* Image style */
+.topic-image {
+    width: 120px;
+    height: 155px;
+    border-radius: 8px;
+}
+
+/* Title style */
+.topic-title {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 15px;
+}
+
+/* Description style */
+.topic-description {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+}
